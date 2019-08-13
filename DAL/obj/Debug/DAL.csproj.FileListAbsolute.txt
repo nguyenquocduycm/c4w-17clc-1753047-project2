@@ -1,0 +1,9 @@
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DAL\bin\Debug\DAL.dll
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DAL\bin\Debug\DAL.pdb
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DAL\bin\Debug\DTO.dll
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DAL\bin\Debug\DTO.pdb
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DAL\obj\Debug\DAL.dll
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,6 @@
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DTO\bin\Debug\DTO.dll
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DTO\bin\Debug\DTO.pdb
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DTO\obj\Debug\DTO.dll
+E:\duy\Lập trình Windows\Đồ án 2\Project2\DTO\obj\Debug\DTO.pdb
