@@ -42,7 +42,7 @@ namespace GUI
                     if (loglist.User == textBox1.Text.ToString() && loglist.Password == textBox2.Text.ToString())
                     {
                         //this.Close();
-                        Visible = false;
+                        //Visible = false;
                         Form2 f2 = new Form2();
                         //Form1 f1 = new Form1();
                         //f2.Activate();
