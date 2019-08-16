@@ -58,6 +58,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button13 = new System.Windows.Forms.Button();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.button12 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -68,14 +76,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button13 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -427,6 +427,71 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Schedule";
             // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Gray;
+            this.button13.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.Location = new System.Drawing.Point(270, 6);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(114, 42);
+            this.button13.TabIndex = 11;
+            this.button13.Text = "View";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Visible = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.listView2.GridLines = true;
+            this.listView2.Location = new System.Drawing.Point(124, 194);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(633, 297);
+            this.listView2.TabIndex = 10;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.Visible = false;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "ID";
+            this.columnHeader6.Width = 100;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Name";
+            this.columnHeader7.Width = 150;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Sex";
+            this.columnHeader8.Width = 50;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "SSN";
+            this.columnHeader9.Width = 90;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Class";
+            this.columnHeader10.Width = 90;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(124, 24);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(121, 24);
+            this.comboBox6.TabIndex = 9;
+            this.comboBox6.Visible = false;
+            // 
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -455,11 +520,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(207, 96);
+            this.label7.Location = new System.Drawing.Point(142, 96);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 23);
+            this.label7.Size = new System.Drawing.Size(127, 23);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Class:";
+            this.label7.Text = "CodeCourese:";
             this.label7.Visible = false;
             // 
             // textBox5
@@ -482,6 +547,7 @@
             this.button11.Text = "Delete";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Visible = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -495,6 +561,7 @@
             this.button10.Text = "Insert";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Visible = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // comboBox5
             // 
@@ -539,71 +606,6 @@
             this.tabPage3.Size = new System.Drawing.Size(768, 357);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Transcript";
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(124, 24);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 24);
-            this.comboBox6.TabIndex = 9;
-            this.comboBox6.Visible = false;
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10});
-            this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(124, 54);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(633, 297);
-            this.listView2.TabIndex = 10;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.Visible = false;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "ID";
-            this.columnHeader6.Width = 100;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Name";
-            this.columnHeader7.Width = 150;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Sex";
-            this.columnHeader8.Width = 50;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "SSN";
-            this.columnHeader9.Width = 90;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Class";
-            this.columnHeader10.Width = 90;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.Gray;
-            this.button13.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(270, 6);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(114, 42);
-            this.button13.TabIndex = 11;
-            this.button13.Text = "View";
-            this.button13.UseVisualStyleBackColor = false;
-            this.button13.Visible = false;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // Form2
             // 

@@ -31,13 +31,25 @@ namespace BUS
             }
         }
 
-        
+        public void AddSchedule(string Code, string ID)
+        {
+            DAL.DAL d = new DAL.DAL();
+            var newStudent=d.GetStudentToInserrtfromDB(ID);
+            d.InsertSchedule(newStudent, Code);
+        }
+
+        public void DeleteSchedule(string Code,string ID)
+        {
+            DAL.DAL d = new DAL.DAL();
+            //var newStudent = d.GetStudentToInserrtfromDB(ID);
+            d.DeleteSchedule(Code, ID);
+        }
 
 
         
         public string GetCLassfromPath(string s)
         {
-            string m;
+            //string m;
             char[] a = s.ToCharArray();
             for(int i=a.Length-1;i>0;i--)
             {

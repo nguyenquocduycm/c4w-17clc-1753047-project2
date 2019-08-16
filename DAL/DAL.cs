@@ -104,6 +104,71 @@ namespace DAL
             return results;
         }
 
+        public Class GetStudentToInserrtfromDB(string ID)
+        {
+            //var results = new List<Class>();
+            OleDbConnection cnn = new OleDbConnection();
+            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            cnn.Open();
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = cnn;
+            cmd.CommandText = $"select * from Class where Class.ID='{ID}'";
+            var rd = cmd.ExecuteReader();
+
+            rd.Read();
+            var cls = new Class();
+            cls.STT = Convert.ToString(rd.GetInt32(0));
+            cls.ID = rd.GetString(1);
+            cls.Name = rd.GetString(2);
+            cls.Sex = rd.GetString(3);
+            cls.SSN = rd.GetString(4);
+            cls.classes = rd.GetString(5);
+                //cls.classes = rd.GetString(5);
+                //product.Id = rd.GetInt32(0);
+                //product.Name = rd.GetString(1);
+                //product.Price = rd.GetInt32(2);
+            //results.Add(cls);
+            
+            cnn.Close();
+            return cls;
+        }
+        public void InsertSchedule(Class cls,string Code)
+        {
+            
+            OleDbConnection cnn = new OleDbConnection();
+            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            cnn.Open();
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = cnn;
+            
+                //cmd.CommandText = $"insert into Schedule values ('{loglist.Code}', '{loglist.Name}','{loglist.classroom}','{loglist.classess}');";
+            cmd.CommandText = $"insert into Schedule_Class values ('{cls.ID}', '{cls.Name}','{cls.Sex}','{cls.SSN}','{cls.classes}','{Code}');";
+            cmd.ExecuteNonQuery();
+                //var a = this.AddScheToDB(loglist);
+
+            
+            cnn.Close();
+        }
+
+        public void DeleteSchedule(string Code, string ID)
+        {
+
+            OleDbConnection cnn = new OleDbConnection();
+            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            cnn.Open();
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = cnn;
+
+            //cmd.CommandText = $"insert into Schedule values ('{loglist.Code}', '{loglist.Name}','{loglist.classroom}','{loglist.classess}');";
+            //cmd.CommandText = $"insert into Schedule_Class values ('{cls.ID}', '{cls.Name}','{cls.Sex}','{cls.SSN}','{cls.classes}','{Code}');";
+            cmd.CommandText = $"delete from Schedule_Class where Schedule_Class.CodeSchedule='{Code}' and Schedule_Class.ID='{ID}' ;";
+            cmd.ExecuteNonQuery();
+            //var a = this.AddScheToDB(loglist);
+
+
+            cnn.Close();
+        }
+
         public List<Class> GetCodeShedulefromDB(string cl)
         {
             var results = new List<Class>();
@@ -132,6 +197,8 @@ namespace DAL
             cnn.Close();
             return results;
         }
+
+        
 
         public Class AddStudent(Class Student)
         {
@@ -187,7 +254,7 @@ namespace DAL
         }
 
         //type =0 loi,type=1 thanh cong
-        public List<Schedule> GetSchedule(string path, bool type, string cls)
+        public List<Schedule> GetSchedule(string path, bool type, List<string> cls)
         {
 
             var result = new List<Schedule>();
@@ -197,7 +264,7 @@ namespace DAL
             string r = reader.ReadLine();
             string[] l = r.Split(',');
 
-            cls = l[0];
+            //cls = l[0];
 
             string empty = reader.ReadLine();
 
@@ -220,7 +287,7 @@ namespace DAL
                 sche.Name = M[2];
                 sche.classroom = M[3];
                 sche.classess = l[0];
-
+                cls.Add(M[1]);
                 result.Add(sche);
 
             }
@@ -277,7 +344,7 @@ namespace DAL
             cnn.Close();
         }
 
-        public bool AddSchedule(string path, string cls)
+        public bool AddSchedule(string path, List<string> cls)
         {
             bool type = true;
             List<DTO.Schedule> log = new List<DTO.Schedule>();

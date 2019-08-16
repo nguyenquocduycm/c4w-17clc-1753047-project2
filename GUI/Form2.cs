@@ -162,6 +162,7 @@ namespace GUI
             foreach (string s in n)
             {
                 comboBox1.Items.Add(s);
+                
                 comboBox3.Items.Add(s);
             }
 
@@ -254,7 +255,7 @@ namespace GUI
         //import Schedule
         private void button8_Click(object sender, EventArgs e)
         {
-            string cls="";
+            List<string> cls=new List<string>();
             try
             {
                 OpenFileDialog open = new OpenFileDialog();
@@ -276,8 +277,12 @@ namespace GUI
                 }
                 else
                 {
-                    comboBox5.Items.Add(cls);
-                    comboBox6.Items.Add(cls);
+                    foreach (string s in cls)
+                    {
+                        comboBox5.Items.Add(s);
+                        comboBox6.Items.Add(s);
+                    }
+                    
                     MessageBox.Show("Imported", "Message", MessageBoxButtons.OK);
 
                 }
@@ -340,6 +345,34 @@ namespace GUI
                 item.SubItems.Add(c.SSN);
                 item.SubItems.Add(c.classes);
                 listView2.Items.Add(item);
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if(comboBox5.Text.ToString()==""||textBox5.Text.ToString()=="")
+            {
+                MessageBox.Show("You must enter all text", "Erorr", MessageBoxButtons.OK);
+            }
+            else
+            {
+                BUS.BUS b = new BUS.BUS();
+                b.AddSchedule(comboBox5.SelectedItem.ToString(), textBox5.Text.ToString());
+                MessageBox.Show("Inserted success", "Insert", MessageBoxButtons.OK);
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (comboBox5.Text.ToString() == "" || textBox5.Text.ToString() == "")
+            {
+                MessageBox.Show("You must enter all text", "Erorr", MessageBoxButtons.OK);
+            }
+            else
+            {
+                BUS.BUS b = new BUS.BUS();
+                b.DeleteSchedule(comboBox5.SelectedItem.ToString(), textBox5.Text.ToString());
+                MessageBox.Show("Deleted success", "Insert", MessageBoxButtons.OK);
             }
         }
     }

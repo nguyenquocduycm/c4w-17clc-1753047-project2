@@ -58,3 +58,4 @@ select Class.STT,Class.ID,Class.NameC,Class.Sex,Class.SSN from Class,Schedule wh
 
 use master
 drop database University;
+
