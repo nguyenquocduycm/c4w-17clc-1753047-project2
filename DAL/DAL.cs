@@ -94,6 +94,36 @@ namespace DAL
                 cls.Name = rd.GetString(2);
                 cls.Sex = rd.GetString(3);
                 cls.SSN = rd.GetString(4);
+                //cls.classes = rd.GetString(5);
+                //product.Id = rd.GetInt32(0);
+                //product.Name = rd.GetString(1);
+                //product.Price = rd.GetInt32(2);
+                results.Add(cls);
+            }
+            cnn.Close();
+            return results;
+        }
+
+        public List<Class> GetCodeShedulefromDB(string cl)
+        {
+            var results = new List<Class>();
+            OleDbConnection cnn = new OleDbConnection();
+            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            cnn.Open();
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = cnn;
+            cmd.CommandText = $"select * from Schedule_Class where Schedule_Class.CodeSchedule='{cl}'";
+            var rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                var cls = new Class();
+                cls.STT = Convert.ToString(rd.GetInt32(0));
+                cls.ID = rd.GetString(1);
+                cls.Name = rd.GetString(2);
+                cls.Sex = rd.GetString(3);
+                cls.SSN = rd.GetString(4);
+                cls.classes = rd.GetString(5);
+                //cls.classes = rd.GetString(5);
                 //product.Id = rd.GetInt32(0);
                 //product.Name = rd.GetString(1);
                 //product.Price = rd.GetInt32(2);
@@ -147,7 +177,7 @@ namespace DAL
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
-            cmd.CommandText = "select distinct Schedule.Class from Schedule";
+            cmd.CommandText = "select distinct Schedule.Code from Schedule";
             var rd = cmd.ExecuteReader();
             while (rd.Read())
             {

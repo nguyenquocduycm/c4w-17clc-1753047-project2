@@ -58,16 +58,24 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button12 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button9 = new System.Windows.Forms.Button();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button13 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -336,6 +344,7 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(117, 39);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(638, 305);
@@ -399,6 +408,9 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.Controls.Add(this.button13);
+            this.tabPage2.Controls.Add(this.listView2);
+            this.tabPage2.Controls.Add(this.comboBox6);
             this.tabPage2.Controls.Add(this.button12);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label7);
@@ -414,6 +426,97 @@
             this.tabPage2.Size = new System.Drawing.Size(768, 357);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Schedule";
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button12.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(6, 138);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(93, 40);
+            this.button12.TabIndex = 8;
+            this.button12.Text = "View";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(230, 138);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(39, 23);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "ID:";
+            this.label8.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(207, 96);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 23);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Class:";
+            this.label7.Visible = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(275, 139);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(170, 22);
+            this.textBox5.TabIndex = 5;
+            this.textBox5.Visible = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Gray;
+            this.button11.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(520, 24);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(128, 54);
+            this.button11.TabIndex = 4;
+            this.button11.Text = "Delete";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Visible = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Gray;
+            this.button10.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(201, 24);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(128, 54);
+            this.button10.TabIndex = 3;
+            this.button10.Text = "Insert";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Visible = false;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(275, 97);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(170, 24);
+            this.comboBox5.TabIndex = 2;
+            this.comboBox5.Visible = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button9.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(6, 79);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(93, 40);
+            this.button9.TabIndex = 1;
+            this.button9.Text = "Edit";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -437,95 +540,70 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Transcript";
             // 
-            // button9
+            // comboBox6
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button9.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(6, 79);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(93, 40);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "Edit";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(124, 24);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(121, 24);
+            this.comboBox6.TabIndex = 9;
+            this.comboBox6.Visible = false;
             // 
-            // comboBox5
+            // listView2
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(275, 97);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(170, 24);
-            this.comboBox5.TabIndex = 2;
-            this.comboBox5.Visible = false;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.listView2.GridLines = true;
+            this.listView2.Location = new System.Drawing.Point(124, 54);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(633, 297);
+            this.listView2.TabIndex = 10;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.Visible = false;
             // 
-            // button10
+            // columnHeader6
             // 
-            this.button10.BackColor = System.Drawing.Color.Gray;
-            this.button10.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(201, 24);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(128, 54);
-            this.button10.TabIndex = 3;
-            this.button10.Text = "Insert";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Visible = false;
+            this.columnHeader6.Text = "ID";
+            this.columnHeader6.Width = 100;
             // 
-            // button11
+            // columnHeader7
             // 
-            this.button11.BackColor = System.Drawing.Color.Gray;
-            this.button11.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(520, 24);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(128, 54);
-            this.button11.TabIndex = 4;
-            this.button11.Text = "Delete";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Visible = false;
+            this.columnHeader7.Text = "Name";
+            this.columnHeader7.Width = 150;
             // 
-            // textBox5
+            // columnHeader8
             // 
-            this.textBox5.Location = new System.Drawing.Point(275, 139);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(170, 22);
-            this.textBox5.TabIndex = 5;
-            this.textBox5.Visible = false;
+            this.columnHeader8.Text = "Sex";
+            this.columnHeader8.Width = 50;
             // 
-            // label7
+            // columnHeader9
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(207, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 23);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Class:";
-            this.label7.Visible = false;
+            this.columnHeader9.Text = "SSN";
+            this.columnHeader9.Width = 90;
             // 
-            // label8
+            // columnHeader10
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(230, 138);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 23);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "ID:";
-            this.label8.Visible = false;
+            this.columnHeader10.Text = "Class";
+            this.columnHeader10.Width = 90;
             // 
-            // button12
+            // button13
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button12.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(6, 138);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(93, 40);
-            this.button12.TabIndex = 8;
-            this.button12.Text = "View";
-            this.button12.UseVisualStyleBackColor = false;
+            this.button13.BackColor = System.Drawing.Color.Gray;
+            this.button13.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.Location = new System.Drawing.Point(270, 6);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(114, 42);
+            this.button13.TabIndex = 11;
+            this.button13.Text = "View";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Visible = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // Form2
             // 
@@ -587,5 +665,13 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.Button button13;
     }
 }

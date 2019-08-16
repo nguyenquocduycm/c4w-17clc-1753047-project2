@@ -170,7 +170,10 @@ namespace GUI
             foreach (string r in m)
             {
                 comboBox5.Items.Add(r);
+                comboBox6.Items.Add(r);
             }
+
+
         }
 
         //import list student
@@ -274,6 +277,7 @@ namespace GUI
                 else
                 {
                     comboBox5.Items.Add(cls);
+                    comboBox6.Items.Add(cls);
                     MessageBox.Show("Imported", "Message", MessageBoxButtons.OK);
 
                 }
@@ -295,6 +299,48 @@ namespace GUI
 
             comboBox5.Visible = true;
             textBox5.Visible = true;
+
+            comboBox6.Visible = false;
+            listView2.Visible = false;
+            button13.Visible = false;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            button10.Visible = false;
+            button11.Visible = false;
+
+            label7.Visible = false;
+            label8.Visible = false;
+
+            comboBox5.Visible = false;
+            textBox5.Visible = false;
+
+            comboBox6.Visible = true;
+            listView2.Visible = true;
+            button13.Visible = true;
+            
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            DAL.DAL da = new DAL.DAL();
+            //List<DTO.Class> cls = new List<DTO.Class>();
+
+            //var cls = da.GetClassfromDB(comboBox1.SelectedItem.ToString());
+            var cls = da.GetCodeShedulefromDB(comboBox6.SelectedItem.ToString());
+            listView2.Items.Clear();
+
+            foreach (DTO.Class c in cls)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = c.ID;
+                item.SubItems.Add(c.Name);
+                item.SubItems.Add(c.Sex);
+                item.SubItems.Add(c.SSN);
+                item.SubItems.Add(c.classes);
+                listView2.Items.Add(item);
+            }
         }
     }
 
