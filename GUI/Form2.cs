@@ -46,6 +46,7 @@ namespace GUI
             button5.Visible = false;
             button6.Visible = false;
 
+            /*
             DAL.DAL da = new DAL.DAL();
             List<string> n = new List<string>();
             n = da.GetClassFromDBToCombobox();
@@ -53,6 +54,7 @@ namespace GUI
             {
                 comboBox1.Items.Add(s);
             }
+            */
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -141,7 +143,7 @@ namespace GUI
             button6.Visible = false;
             button7.Visible = false;
            
-
+            /*
             DAL.DAL da = new DAL.DAL();
             List<string> n = new List<string>();
             n = da.GetClassFromDBToCombobox();
@@ -149,11 +151,26 @@ namespace GUI
             {
                 comboBox3.Items.Add(s);
             }
+            */
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            DAL.DAL da = new DAL.DAL();
+            List<string> n = new List<string>();
+            n = da.GetClassFromDBToCombobox();
+            foreach (string s in n)
+            {
+                comboBox1.Items.Add(s);
+                comboBox3.Items.Add(s);
+            }
 
+            List<string> m = new List<string>();
+            m = da.GetScheduleFromDBToCombobox();
+            foreach (string r in m)
+            {
+                comboBox5.Items.Add(r);
+            }
         }
 
         //import list student
@@ -216,7 +233,7 @@ namespace GUI
             DAL.DAL da = new DAL.DAL();
             //List<DTO.Class> cls = new List<DTO.Class>();
             
-            var cls=da.GetClassfromDB(comboBox1.SelectedText.ToString());
+            var cls=da.GetClassfromDB(comboBox1.SelectedItem.ToString());
             listView1.Items.Clear();
 
             foreach(DTO.Class c in cls)
@@ -229,6 +246,55 @@ namespace GUI
                 item.SubItems.Add(c.SSN);
                 listView1.Items.Add(item);
             }
+        }
+
+        //import Schedule
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string cls="";
+            try
+            {
+                OpenFileDialog open = new OpenFileDialog();
+                open.Filter = "Excel File |*csv";
+                if (open.ShowDialog() == DialogResult.Cancel)
+                {
+                    return;
+                }
+                
+                //BLL_ImportListClass.ReadFileCSV(open.FileName);
+                DAL.DAL da = new DAL.DAL();
+                bool type=da.AddSchedule(open.FileName, cls);
+
+                
+
+                if (type == false)
+                {
+                    MessageBox.Show("Format file is erorr", "ERORR", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    comboBox5.Items.Add(cls);
+                    MessageBox.Show("Imported", "Message", MessageBoxButtons.OK);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            button10.Visible = true;
+            button11.Visible = true;
+
+            label7.Visible = true;
+            label8.Visible = true;
+
+            comboBox5.Visible = true;
+            textBox5.Visible = true;
         }
     }
 
