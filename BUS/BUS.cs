@@ -45,6 +45,8 @@ namespace BUS
             d.DeleteSchedule(Code, ID);
         }
 
+        
+
 
         
         public string GetCLassfromPath(string s)

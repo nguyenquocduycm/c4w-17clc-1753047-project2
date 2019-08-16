@@ -174,6 +174,12 @@ namespace GUI
                 comboBox6.Items.Add(r);
             }
 
+            List<string> l = new List<string>();
+            l = da.GetScoreFromDBToCombobox();
+            foreach (string r in l)
+            {
+                comboBox7.Items.Add(r);
+            }
 
         }
 
@@ -373,6 +379,172 @@ namespace GUI
                 BUS.BUS b = new BUS.BUS();
                 b.DeleteSchedule(comboBox5.SelectedItem.ToString(), textBox5.Text.ToString());
                 MessageBox.Show("Deleted success", "Insert", MessageBoxButtons.OK);
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            label9.Visible = true;
+            label10.Visible = true;
+            label11.Visible = true;
+            label12.Visible = true;
+            label13.Visible = true;
+            label14.Visible = true;
+
+            label15.Visible = false;
+            label16.Visible = false;
+            label17.Visible = false;
+            label18.Visible = false;
+
+            comboBox7.Visible = true;
+
+            listView3.Visible = false;
+
+            button18.Visible = false;
+            button19.Visible = false;
+            button20.Visible = false;
+            button21.Visible = true;
+
+            textBox6.Visible = true;
+            textBox7.Visible = true;
+            textBox8.Visible = true;
+            textBox9.Visible = true;
+            textBox10.Visible = true;
+
+            textBox11.Visible = false;
+            textBox12.Visible = false;
+            textBox13.Visible = false;
+            textBox14.Visible = false;
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            label9.Visible = true;
+
+            label10.Visible = false;
+            label11.Visible = false;
+            label12.Visible = false;
+            label13.Visible = false;
+            label14.Visible = false;
+            label15.Visible = false;
+            label16.Visible = false;
+            label17.Visible = false;
+            label18.Visible = false;
+
+            comboBox7.Visible = true;
+
+            listView3.Visible = true ;
+
+            button18.Visible = true;
+            button19.Visible = false;
+            button20.Visible = false;
+            button21.Visible =false;
+
+            textBox6.Visible = false;
+
+            textBox7.Visible = false;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
+            textBox10.Visible = false;
+            textBox11.Visible = false;
+            textBox12.Visible = false;
+            textBox13.Visible = false;
+            textBox14.Visible = false;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            label9.Visible = true;
+            label10.Visible = false;
+            label11.Visible = false;
+            label12.Visible = false;
+            label13.Visible = false;
+            label14.Visible = false;
+
+            label15.Visible = true;
+            label16.Visible = true;
+            label17.Visible = true;
+            label18.Visible = true;
+
+            comboBox7.Visible = true;
+
+            listView3.Visible = false;
+
+            button18.Visible = false;
+            button19.Visible = false;
+            button20.Visible = true;
+            button21.Visible = false;
+
+            textBox6.Visible = false;
+            textBox7.Visible = false;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
+            textBox10.Visible = false;
+
+            textBox11.Visible = true;
+            textBox12.Visible = true;
+            textBox13.Visible = true;
+            textBox14.Visible = true;
+        }
+
+        //import score
+        private void button14_Click(object sender, EventArgs e)
+        {
+            string cls = "";
+            try
+            {
+                OpenFileDialog open = new OpenFileDialog();
+                open.Filter = "Excel File |*csv";
+                if (open.ShowDialog() == DialogResult.Cancel)
+                {
+                    return;
+                }
+
+                //BLL_ImportListClass.ReadFileCSV(open.FileName);
+                DAL.DAL da = new DAL.DAL();
+                
+                bool type = da.AddScore(open.FileName, cls);
+
+
+                if (type == false)
+                {
+                    MessageBox.Show("Format file is erorr", "ERORR", MessageBoxButtons.OK);
+                }
+                else
+                {
+                   comboBox7.Items.Add(cls);
+                   
+                    MessageBox.Show("Imported", "Message", MessageBoxButtons.OK);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        //file update
+        private void button21_Click(object sender, EventArgs e)
+        {
+            if(comboBox7.SelectedItem.ToString()==""||textBox6.Text.ToString()=="")
+            {
+                MessageBox.Show("You must enter all text", "Erorr", MessageBoxButtons.OK);
+            }
+            else
+            {
+                DAL.DAL d =new DAL.DAL();
+                var update=d.GetFindUpdate(comboBox7.SelectedItem.ToString(), textBox6.Text.ToString());
+                textBox7.Text = update.MidTerm;
+                textBox8.Text = update.FinalTerm;
+                textBox9.Text = update.Bonus;
+                textBox10.Text = update.Total;
             }
         }
     }
