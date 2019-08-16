@@ -406,7 +406,7 @@ namespace GUI
             listView3.Visible = false;
 
             button18.Visible = false;
-            button19.Visible = false;
+            button19.Visible = true;
             button20.Visible = false;
             button21.Visible = true;
 
@@ -440,9 +440,9 @@ namespace GUI
 
             listView3.Visible = true ;
 
-            button18.Visible = true;
+            button18.Visible = false;
             button19.Visible = false;
-            button20.Visible = false;
+            button20.Visible = true;
             button21.Visible =false;
 
             textBox6.Visible = false;
@@ -475,9 +475,9 @@ namespace GUI
 
             listView3.Visible = false;
 
-            button18.Visible = false;
+            button18.Visible = true;
             button19.Visible = false;
-            button20.Visible = true;
+            button20.Visible = false;
             button21.Visible = false;
 
             textBox6.Visible = false;
@@ -545,6 +545,65 @@ namespace GUI
                 textBox8.Text = update.FinalTerm;
                 textBox9.Text = update.Bonus;
                 textBox10.Text = update.Total;
+            }
+        }
+
+        //update
+        private void button19_Click(object sender, EventArgs e)
+        {
+            double temp=0;
+            DTO.Transcript Dt = new DTO.Transcript();
+            if (comboBox7.SelectedItem.ToString() == "" || textBox6.Text.ToString() == ""|| !double.TryParse(textBox7.Text.ToString(),out temp) ||
+                 !double.TryParse(textBox8.Text.ToString(), out temp) || !double.TryParse(textBox9.Text.ToString(), out temp) || !double.TryParse(textBox10.Text.ToString(), out temp))
+            {
+                
+                MessageBox.Show("You must enter all text or data invalid", "Erorr", MessageBoxButtons.OK);
+            }
+            else
+            {
+                DAL.DAL da = new DAL.DAL();
+                da.UpdateScore(comboBox7.SelectedItem.ToString(), textBox6.Text.ToString(), textBox7.Text.ToString(), textBox8.Text.ToString(), textBox9.Text.ToString(), textBox10.Text.ToString());
+                MessageBox.Show("Updated success", "Update", MessageBoxButtons.OK);
+            }
+        }
+
+        //view Score
+        private void button20_Click(object sender, EventArgs e)
+        {
+            if (comboBox7.SelectedItem.ToString() == "" )
+            {
+                MessageBox.Show("You must enter all text", "Erorr", MessageBoxButtons.OK);
+            }
+            else
+            {
+                DAL.DAL da = new DAL.DAL();
+                //List<DTO.Class> cls = new List<DTO.Class>();
+
+                //var cls = da.GetClassfromDB(comboBox1.SelectedItem.ToString());
+
+                var cls = da.GetScorefromDB(comboBox7.SelectedItem.ToString());
+                listView3.Items.Clear();
+                double result;
+                string[] re =new string[2] { "Pass", "Fail" };
+                foreach (DTO.Transcript c in cls)
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.Text = c.STT;
+                    item.SubItems.Add(c.ID);
+                    item.SubItems.Add(c.Name);
+                    item.SubItems.Add(c.MidTerm);
+                    item.SubItems.Add(c.FinalTerm);
+                    item.SubItems.Add(c.Bonus);
+                    item.SubItems.Add(c.Total);
+                    double.TryParse(c.Total, out result);
+                    if(result<5)
+                        item.SubItems.Add(re[1]);
+                    else
+                        item.SubItems.Add(re[0]);
+
+
+                    listView3.Items.Add(item);
+                }
             }
         }
     }

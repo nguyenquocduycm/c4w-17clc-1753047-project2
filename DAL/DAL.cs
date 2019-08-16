@@ -203,6 +203,23 @@ namespace DAL
             return cls;
         }
 
+        public void UpdateScore(string Code,string ID, string mid,string final,string bonus,string total)
+        {
+            OleDbConnection cnn = new OleDbConnection();
+            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            cnn.Open();
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = cnn;
+
+            //cmd.CommandText = $"insert into Schedule values ('{loglist.Code}', '{loglist.Name}','{loglist.classroom}','{loglist.classess}');";
+            //cmd.CommandText = $"insert into Schedule_Class values ('{cls.ID}', '{cls.Name}','{cls.Sex}','{cls.SSN}','{cls.classes}','{Code}');";
+            cmd.CommandText = $"update Transcript set Transcript.Midterm={mid} ,Transcript.Finalterm={final},Transcript.Bonus={bonus},Transcript.total={total} where Transcript.code='{Code}' and Transcript.ID='{ID}' ;";
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
+
+
+
         public List<Class> GetCodeShedulefromDB(string cl)
         {
             var results = new List<Class>();
@@ -344,6 +361,39 @@ namespace DAL
             }
             reader.Close();
             return result;
+        }
+
+        public List<Transcript> GetScorefromDB(string code)
+        {
+            var results = new List<Transcript>();
+            OleDbConnection cnn = new OleDbConnection();
+            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            cnn.Open();
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = cnn;
+            cmd.CommandText = $"select * from Transcript where Transcript.code='{code}'";
+            var rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                var cls = new Transcript();
+                cls.STT = Convert.ToString(rd.GetInt32(0));
+                cls.ID = rd.GetString(1);
+                cls.Code = rd.GetString(2);
+                cls.Name = rd.GetString(3);
+
+                cls.MidTerm = Convert.ToString(rd.GetDouble(4));
+                cls.FinalTerm = Convert.ToString(rd.GetDouble(5));
+                cls.Bonus = Convert.ToString(rd.GetDouble(6));
+                cls.Total = Convert.ToString(rd.GetDouble(7));
+                cls.Classes = rd.GetString(8);
+                //cls.classes = rd.GetString(5);
+                //product.Id = rd.GetInt32(0);
+                //product.Name = rd.GetString(1);
+                //product.Price = rd.GetInt32(2);
+                results.Add(cls);
+            }
+            cnn.Close();
+            return results;
         }
 
         public List<Class> GetStudentSchedulefromDB(string Classes)

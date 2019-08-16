@@ -160,7 +160,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(768, 357);
+            this.tabPage1.Size = new System.Drawing.Size(768, 342);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Class";
             // 
@@ -462,7 +462,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(768, 357);
+            this.tabPage2.Size = new System.Drawing.Size(768, 342);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Schedule";
             // 
@@ -806,26 +806,32 @@
             // columnHeader12
             // 
             this.columnHeader12.Text = "ID";
+            this.columnHeader12.Width = 70;
             // 
             // columnHeader13
             // 
             this.columnHeader13.Text = "Name";
+            this.columnHeader13.Width = 150;
             // 
             // columnHeader14
             // 
             this.columnHeader14.Text = "Mid Term";
+            this.columnHeader14.Width = 80;
             // 
             // columnHeader15
             // 
             this.columnHeader15.Text = "Final Term";
+            this.columnHeader15.Width = 80;
             // 
             // columnHeader16
             // 
             this.columnHeader16.Text = "Bonus";
+            this.columnHeader16.Width = 80;
             // 
             // columnHeader17
             // 
-            this.columnHeader17.Text = "AVGScore";
+            this.columnHeader17.Text = "GPA";
+            this.columnHeader17.Width = 80;
             // 
             // label11
             // 
@@ -915,10 +921,12 @@
             this.button19.Text = "Update";
             this.button19.UseVisualStyleBackColor = false;
             this.button19.Visible = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // columnHeader18
             // 
             this.columnHeader18.Text = "Result";
+            this.columnHeader18.Width = 80;
             // 
             // label15
             // 
@@ -1005,20 +1013,21 @@
             this.button20.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button20.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button20.Location = new System.Drawing.Point(670, 20);
+            this.button20.Location = new System.Drawing.Point(670, 7);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(90, 37);
             this.button20.TabIndex = 27;
-            this.button20.Text = "Search";
+            this.button20.Text = "View";
             this.button20.UseVisualStyleBackColor = false;
             this.button20.Visible = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button21
             // 
             this.button21.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button21.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button21.Location = new System.Drawing.Point(670, 4);
+            this.button21.Location = new System.Drawing.Point(670, 93);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(90, 37);
             this.button21.TabIndex = 28;
