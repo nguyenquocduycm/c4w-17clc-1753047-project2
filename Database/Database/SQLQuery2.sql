@@ -39,11 +39,19 @@ create table Transcript
 (
 	STT int IDENTITY,
 	ID nvarchar(10) not null,
+	code char(15) not null,
 	NameT nvarchar(50) not null,
 	Midterm float not null,
 	Finalterm float not null,
 	Bonus float not null,
 	total float not null,
+	Class char(15) not null,
+);
+
+create table LoginForm
+(
+	userL char(10) not null,
+	pass char(20) not null,
 );
 
 ALTER TABLE Schedule ADD Constraint FK__Schedule__Class__05F8DC4F FOREIGN KEY (Class) REFERENCES Class(Class);
@@ -59,3 +67,6 @@ select Class.STT,Class.ID,Class.NameC,Class.Sex,Class.SSN from Class,Schedule wh
 use master
 drop database University;
 
+DELETE FROM Transcript;
+
+select Count(Transcript.total) from Transcript where Transcript.code='CTT011' and Transcript.total<5

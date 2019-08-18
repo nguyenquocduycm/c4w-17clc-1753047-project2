@@ -32,22 +32,36 @@ namespace GUI
                 MessageBox.Show("You must import user or pass", "Error", MessageBoxButtons.OK);
 
             }
-            else
+            
+            else 
             {
                 List<DTO.LogIn> log = new List<DTO.LogIn>();
                 DAL.DAL d = new DAL.DAL();
                 var list = d.GetLogIn();
                 foreach (var loglist in list)
                 {
-                    if (loglist.User == textBox1.Text.ToString() && loglist.Password == textBox2.Text.ToString())
+                    if(textBox1.Text.ToString() == "giaovu" && textBox2.Text.ToString() == "giaovu")
                     {
                         //this.Close();
-                        //Visible = false;
+                        Visible = false;
                         Form2 f2 = new Form2();
                         //Form1 f1 = new Form1();
                         //f2.Activate();
                         f2.ShowDialog();
-                        
+                        this.Visible = true;
+
+
+                        count = 1;
+                        break;
+                    }
+                    else if (loglist.User == textBox1.Text.ToString() && loglist.Password == textBox2.Text.ToString())
+                    {
+                        Visible = false;
+                        Form3 f3 = new Form3();
+                        //Form1 f1 = new Form1();
+                        //f2.Activate();
+                        f3.ShowDialog();
+                        this.Visible = true;
 
                         count = 1;
                         break;
@@ -64,6 +78,12 @@ namespace GUI
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DAL.DAL d = new DAL.DAL();
+            d.InsertGiaoVu();
         }
     }
 }

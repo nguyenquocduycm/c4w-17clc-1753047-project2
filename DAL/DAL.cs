@@ -13,29 +13,23 @@ namespace DAL
     {
         public List<LogIn> GetLogIn()
         {
-            var result = new List<LogIn>();
-            //StreamReader reader = new StreamReader("Login.csv");
-            StreamReader reader = new StreamReader(@"E:\duy\Lập trình Windows\Đồ án 2\Project2\Login.csv");
-            //string l = reader.ReadToEnd();
-
-            // int N = int.Parse(reader.ReadToEnd());
-            //int N = Convert.ToInt32(l);
-
-            for (int i = 0; i < 1000; i++)
+            var results = new List<LogIn>();
+            OleDbConnection cnn = new OleDbConnection();
+            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            cnn.Open();
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = cnn;
+            cmd.CommandText = $"select * from LoginForm";
+            var rd = cmd.ExecuteReader();
+            while (rd.Read())
             {
-                string s = reader.ReadLine();
-                if (s == null)
-                    break;
-                string[] M = s.Split(',');
-
-                var log = new LogIn();
-                log.User = M[0];
-                log.Password = M[1];
-                result.Add(log);
-
+                var cls = new LogIn();
+                cls.User= rd.GetString(0);
+                cls.Password = rd.GetString(1);
+                results.Add(cls);
             }
-            reader.Close();
-            return result;
+            cnn.Close();
+            return results;
         }
 
         //type =0 loi,type=1 thanh cong
@@ -249,6 +243,19 @@ namespace DAL
             return results;
         }
 
+        public void InsertGiaoVu()
+        {
+            OleDbConnection cnn = new OleDbConnection();
+            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            cnn.Open();
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = cnn;
+            cmd.CommandText = $"insert into LoginForm values ('giaovu','giaovu');";
+            //var id = int.Parse(cmd.ExecuteScalar().ToString());
+            //Student.STT = id;
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
 
 
         public Class AddStudent(Class Student)
@@ -265,6 +272,18 @@ namespace DAL
             //Student.STT = id;
             cmd.ExecuteNonQuery();
             cnn.Close();
+
+            OleDbConnection cn = new OleDbConnection();
+            cn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            cn.Open();
+            OleDbCommand cmdd = new OleDbCommand();
+            cmdd.Connection = cn;
+            cmdd.CommandText = $"insert into LoginForm values ('{Student.ID}', '123456');";
+            //var id = int.Parse(cmd.ExecuteScalar().ToString());
+            //Student.STT = id;
+            cmdd.ExecuteNonQuery();
+            cn.Close();
+
             return Student;
         }
 
@@ -396,6 +415,38 @@ namespace DAL
             return results;
         }
 
+        public int GetPassFromDB( string code)
+        {
+            int results;
+            OleDbConnection cnn = new OleDbConnection();
+            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            cnn.Open();
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = cnn;
+            cmd.CommandText = $"select Count(Transcript.total) from Transcript where Transcript.code='{code}' and Transcript.total>=5";
+            var rd = cmd.ExecuteReader();
+            rd.Read();
+            results = rd.GetInt32(0);
+            cnn.Close();
+            return results;
+        }
+
+        public int GetFailFromDB(string code)
+        {
+            int results;
+            OleDbConnection cnn = new OleDbConnection();
+            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            cnn.Open();
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = cnn;
+            cmd.CommandText = $"select Count(Transcript.total) from Transcript where Transcript.code='{code}' and Transcript.total<5";
+            var rd = cmd.ExecuteReader();
+            rd.Read();
+            results = rd.GetInt32(0);
+            cnn.Close();
+            return results;
+        }
+
         public List<Class> GetStudentSchedulefromDB(string Classes)
         {
             var results = new List<Class>();
@@ -479,7 +530,7 @@ namespace DAL
         }
 
         //type =0 loi,type=1 thanh cong
-        public List<Transcript> GetScore(string path, bool type, string cls)
+        public List<Transcript> GetScore(string path, bool type,ref string cls)
         {
 
             var result = new List<Transcript>();
@@ -489,11 +540,11 @@ namespace DAL
             string r = reader.ReadLine();
             string[] l = r.Split('-');
 
-            cls = l[0];
+            string str = l[0];
             string Code = l[1];
             string[] p = Code.Split(',');
-            string CoureseCode = p[0];
-
+            //string CoureseCode = p[0];
+            cls+=p[0];
 
             string empty = reader.ReadLine();
 
@@ -519,8 +570,8 @@ namespace DAL
                 score.FinalTerm = M[4];
                 score.Bonus = M[5];
                 score.Total = M[6];
-                score.Classes = cls;
-                score.Code = CoureseCode;
+                score.Classes = str;
+                score.Code = cls;
                 
                 result.Add(score);
 
@@ -529,12 +580,12 @@ namespace DAL
             return result;
         }
 
-        public bool AddScore(string path, string cls)
+        public bool AddScore(string path,ref string cls)
         {
             bool type = true;
             List<DTO.Transcript> log = new List<DTO.Transcript>();
             //DAL.DAL d = new DAL.DAL();
-            var list = this.GetScore(path, type, cls);
+            var list = this.GetScore(path, type,ref cls);
             if (type == false)
             {
                 return false;
@@ -546,11 +597,11 @@ namespace DAL
                 cnn.Open();
                 OleDbCommand cmd = new OleDbCommand();
                 cmd.Connection = cnn;
-
+                
                 foreach (var loglist in list)
                 {
-                    
-                    
+
+                    //cls += loglist.Code;
                     cmd.CommandText = $"insert into Transcript values ('{loglist.ID}', '{loglist.Code}','{loglist.Name}','{loglist.MidTerm}','{loglist.FinalTerm}','{loglist.Bonus}','{loglist.Total}','{loglist.Classes}');";
 
                     cmd.ExecuteNonQuery();

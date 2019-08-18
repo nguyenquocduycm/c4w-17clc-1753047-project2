@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace GUI
 {
     public partial class Form2 : Form
@@ -382,9 +383,19 @@ namespace GUI
             }
         }
 
+        //Statis
         private void button18_Click(object sender, EventArgs e)
         {
+            DAL.DAL d = new DAL.DAL();
+            int a = d.GetPassFromDB(comboBox7.SelectedItem.ToString());
+            int b = d.GetFailFromDB(comboBox7.SelectedItem.ToString());
+            textBox11.Text = Convert.ToString(a);
+            textBox12.Text = Convert.ToString(b);
 
+            double p= Math.Round( (a / (double)(a + b)),2) * 100;
+            double f = Math.Round((b / (double)(a + b)),2) * 100;
+            textBox13.Text = Convert.ToString(p) + "%";
+            textBox14.Text = Convert.ToString(f) + "%";
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -495,7 +506,7 @@ namespace GUI
         //import score
         private void button14_Click(object sender, EventArgs e)
         {
-            string cls = "";
+            string cls="";
             try
             {
                 OpenFileDialog open = new OpenFileDialog();
@@ -508,7 +519,7 @@ namespace GUI
                 //BLL_ImportListClass.ReadFileCSV(open.FileName);
                 DAL.DAL da = new DAL.DAL();
                 
-                bool type = da.AddScore(open.FileName, cls);
+                bool type = da.AddScore(open.FileName,ref cls);
 
 
                 if (type == false)
@@ -605,6 +616,20 @@ namespace GUI
                     listView3.Items.Add(item);
                 }
             }
+        }
+
+        //log out
+        private void button22_Click(object sender, EventArgs e)
+        {
+            /*
+            //Form2 f2 = new Form2();
+            Form1 f1 = new Form1();
+            //f2.Activate();
+            f1.ShowDialog();
+            this.Close();
+            Visible = false;
+            */
+            this.Close();
         }
     }
 

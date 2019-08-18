@@ -43,7 +43,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(266, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 39);
+            this.label1.Size = new System.Drawing.Size(130, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "LOG IN";
             // 
@@ -125,6 +125,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

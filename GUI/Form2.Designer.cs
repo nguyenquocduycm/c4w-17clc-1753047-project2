@@ -76,16 +76,31 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button19 = new System.Windows.Forms.Button();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.button18 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.listView3 = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -93,27 +108,14 @@
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.button19 = new System.Windows.Forms.Button();
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -125,10 +127,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 56);
+            this.tabControl1.Location = new System.Drawing.Point(12, 72);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(776, 371);
+            this.tabControl1.Size = new System.Drawing.Size(776, 355);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -160,7 +162,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(768, 342);
+            this.tabPage1.Size = new System.Drawing.Size(768, 326);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Class";
             // 
@@ -462,7 +464,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(768, 342);
+            this.tabPage2.Size = new System.Drawing.Size(768, 326);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Schedule";
             // 
@@ -671,61 +673,260 @@
             this.tabPage3.Controls.Add(this.button14);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(768, 342);
+            this.tabPage3.Size = new System.Drawing.Size(768, 326);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Transcript";
             // 
-            // button14
+            // button21
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button14.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button14.Location = new System.Drawing.Point(14, 20);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(122, 41);
-            this.button14.TabIndex = 0;
-            this.button14.Text = "Import";
-            this.button14.UseVisualStyleBackColor = false;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button21.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button21.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button21.Location = new System.Drawing.Point(670, 4);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(90, 37);
+            this.button21.TabIndex = 28;
+            this.button21.Text = "Find";
+            this.button21.UseVisualStyleBackColor = false;
+            this.button21.Visible = false;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
-            // button15
+            // button20
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button15.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button15.Location = new System.Drawing.Point(14, 67);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(122, 41);
-            this.button15.TabIndex = 1;
-            this.button15.Text = "Update";
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button20.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button20.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button20.Location = new System.Drawing.Point(670, 4);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(90, 37);
+            this.button20.TabIndex = 27;
+            this.button20.Text = "View";
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Visible = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
-            // button16
+            // textBox14
             // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button16.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button16.Location = new System.Drawing.Point(14, 114);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(122, 41);
-            this.button16.TabIndex = 2;
-            this.button16.Text = "View";
-            this.button16.UseVisualStyleBackColor = false;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.textBox14.Enabled = false;
+            this.textBox14.Location = new System.Drawing.Point(539, 148);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(100, 22);
+            this.textBox14.TabIndex = 26;
+            this.textBox14.Visible = false;
             // 
-            // button17
+            // textBox13
             // 
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button17.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button17.Location = new System.Drawing.Point(14, 161);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(122, 41);
-            this.button17.TabIndex = 3;
-            this.button17.Text = "Statistical";
-            this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.textBox13.Enabled = false;
+            this.textBox13.Location = new System.Drawing.Point(326, 147);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(100, 22);
+            this.textBox13.TabIndex = 25;
+            this.textBox13.Visible = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(168, 147);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(74, 23);
+            this.label18.TabIndex = 24;
+            this.label18.Text = "Percent";
+            this.label18.Visible = false;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Enabled = false;
+            this.textBox12.Location = new System.Drawing.Point(539, 101);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(100, 22);
+            this.textBox12.TabIndex = 23;
+            this.textBox12.Visible = false;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Enabled = false;
+            this.textBox11.Location = new System.Drawing.Point(326, 102);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 22);
+            this.textBox11.TabIndex = 22;
+            this.textBox11.Visible = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(171, 101);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(71, 23);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "Quatity";
+            this.label17.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(547, 46);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 32);
+            this.label16.TabIndex = 20;
+            this.label16.Text = "Fail";
+            this.label16.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(320, 43);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(68, 32);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "Pass";
+            this.label15.Visible = false;
+            // 
+            // button19
+            // 
+            this.button19.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button19.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button19.Location = new System.Drawing.Point(420, 77);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(90, 37);
+            this.button19.TabIndex = 18;
+            this.button19.Text = "Update";
+            this.button19.UseVisualStyleBackColor = false;
+            this.button19.Visible = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(288, 202);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 22);
+            this.textBox10.TabIndex = 17;
+            this.textBox10.Visible = false;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(288, 162);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 22);
+            this.textBox9.TabIndex = 16;
+            this.textBox9.Visible = false;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(288, 124);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 22);
+            this.textBox8.TabIndex = 15;
+            this.textBox8.Visible = false;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(288, 77);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 22);
+            this.textBox7.TabIndex = 14;
+            this.textBox7.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(179, 201);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(103, 23);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "AVGScore:";
+            this.label14.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(212, 161);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(70, 23);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Bonus:";
+            this.label13.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(171, 124);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(111, 23);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Final Term:";
+            this.label12.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(183, 77);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(99, 23);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Mid Term:";
+            this.label11.Visible = false;
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button18.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button18.Location = new System.Drawing.Point(670, 4);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(90, 37);
+            this.button18.TabIndex = 9;
+            this.button18.Text = "Search";
+            this.button18.UseVisualStyleBackColor = false;
+            this.button18.Visible = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(432, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(101, 23);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Student ID";
+            this.label10.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(150, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(125, 23);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Courese Code";
+            this.label9.Visible = false;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(544, 15);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(112, 22);
+            this.textBox6.TabIndex = 6;
+            this.textBox6.Visible = false;
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(287, 16);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(121, 24);
+            this.comboBox7.TabIndex = 5;
+            this.comboBox7.Visible = false;
             // 
             // listView3
             // 
@@ -745,59 +946,6 @@
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
             this.listView3.Visible = false;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(287, 16);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(121, 24);
-            this.comboBox7.TabIndex = 5;
-            this.comboBox7.Visible = false;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(544, 15);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(112, 22);
-            this.textBox6.TabIndex = 6;
-            this.textBox6.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(150, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 23);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Courese Code";
-            this.label9.Visible = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(432, 18);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 23);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Student ID";
-            this.label10.Visible = false;
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button18.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button18.Location = new System.Drawing.Point(670, 4);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(90, 37);
-            this.button18.TabIndex = 9;
-            this.button18.Text = "Search";
-            this.button18.UseVisualStyleBackColor = false;
-            this.button18.Visible = false;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // columnHeader11
             // 
@@ -833,208 +981,62 @@
             this.columnHeader17.Text = "GPA";
             this.columnHeader17.Width = 80;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(183, 77);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(99, 23);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Mid Term:";
-            this.label11.Visible = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(171, 124);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(111, 23);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Final Term:";
-            this.label12.Visible = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(212, 161);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 23);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Bonus:";
-            this.label13.Visible = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(179, 201);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 23);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "AVGScore:";
-            this.label14.Visible = false;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(288, 77);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 14;
-            this.textBox7.Visible = false;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(288, 124);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 15;
-            this.textBox8.Visible = false;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(288, 162);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 22);
-            this.textBox9.TabIndex = 16;
-            this.textBox9.Visible = false;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(288, 202);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 22);
-            this.textBox10.TabIndex = 17;
-            this.textBox10.Visible = false;
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button19.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button19.Location = new System.Drawing.Point(420, 77);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(90, 37);
-            this.button19.TabIndex = 18;
-            this.button19.Text = "Update";
-            this.button19.UseVisualStyleBackColor = false;
-            this.button19.Visible = false;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
             // columnHeader18
             // 
             this.columnHeader18.Text = "Result";
             this.columnHeader18.Width = 80;
             // 
-            // label15
+            // button17
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(320, 43);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(68, 32);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "Pass";
-            this.label15.Visible = false;
+            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button17.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button17.Location = new System.Drawing.Point(14, 161);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(122, 41);
+            this.button17.TabIndex = 3;
+            this.button17.Text = "Statistical";
+            this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
-            // label16
+            // button16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(547, 46);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(63, 32);
-            this.label16.TabIndex = 20;
-            this.label16.Text = "Fail";
-            this.label16.Visible = false;
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button16.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button16.Location = new System.Drawing.Point(14, 114);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(122, 41);
+            this.button16.TabIndex = 2;
+            this.button16.Text = "View";
+            this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
-            // label17
+            // button15
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(171, 101);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(71, 23);
-            this.label17.TabIndex = 21;
-            this.label17.Text = "Quatity";
-            this.label17.Visible = false;
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button15.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button15.Location = new System.Drawing.Point(14, 67);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(122, 41);
+            this.button15.TabIndex = 1;
+            this.button15.Text = "Update";
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
-            // textBox11
+            // button14
             // 
-            this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(326, 102);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 22);
-            this.textBox11.TabIndex = 22;
-            this.textBox11.Visible = false;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Enabled = false;
-            this.textBox12.Location = new System.Drawing.Point(539, 101);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 22);
-            this.textBox12.TabIndex = 23;
-            this.textBox12.Visible = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(168, 147);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(74, 23);
-            this.label18.TabIndex = 24;
-            this.label18.Text = "Percent";
-            this.label18.Visible = false;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Enabled = false;
-            this.textBox13.Location = new System.Drawing.Point(326, 147);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 22);
-            this.textBox13.TabIndex = 25;
-            this.textBox13.Visible = false;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Enabled = false;
-            this.textBox14.Location = new System.Drawing.Point(539, 148);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 22);
-            this.textBox14.TabIndex = 26;
-            this.textBox14.Visible = false;
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button20.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button20.Location = new System.Drawing.Point(670, 7);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(90, 37);
-            this.button20.TabIndex = 27;
-            this.button20.Text = "View";
-            this.button20.UseVisualStyleBackColor = false;
-            this.button20.Visible = false;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button21.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button21.Location = new System.Drawing.Point(670, 93);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(90, 37);
-            this.button21.TabIndex = 28;
-            this.button21.Text = "Find";
-            this.button21.UseVisualStyleBackColor = false;
-            this.button21.Visible = false;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button14.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button14.Location = new System.Drawing.Point(14, 20);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(122, 41);
+            this.button14.TabIndex = 0;
+            this.button14.Text = "Import";
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // label19
             // 
@@ -1043,18 +1045,46 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.BackColor = System.Drawing.Color.Yellow;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Red;
             this.label19.Location = new System.Drawing.Point(12, 4);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(776, 49);
+            this.label19.Size = new System.Drawing.Size(776, 65);
             this.label19.TabIndex = 1;
             this.label19.Text = "Ministry";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button22
+            // 
+            this.button22.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button22.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button22.Location = new System.Drawing.Point(686, 44);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(102, 25);
+            this.button22.TabIndex = 29;
+            this.button22.Text = "Log Out";
+            this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // button23
+            // 
+            this.button23.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button23.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button23.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button23.Location = new System.Drawing.Point(686, 4);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(102, 24);
+            this.button23.TabIndex = 30;
+            this.button23.Text = "Change Pass";
+            this.button23.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button23);
+            this.Controls.Add(this.button22);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form2";
@@ -1159,5 +1189,7 @@
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button23;
     }
 }
