@@ -682,7 +682,7 @@
             this.button21.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button21.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button21.Location = new System.Drawing.Point(670, 4);
+            this.button21.Location = new System.Drawing.Point(670, 24);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(90, 37);
             this.button21.TabIndex = 28;

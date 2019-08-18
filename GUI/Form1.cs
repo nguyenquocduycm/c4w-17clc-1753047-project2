@@ -12,12 +12,14 @@ using DTO;
 
 namespace GUI
 {
+   
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
         }
+        public string studentID;
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -56,10 +58,14 @@ namespace GUI
                     }
                     else if (loglist.User == textBox1.Text.ToString() && loglist.Password == textBox2.Text.ToString())
                     {
+
+                        
                         Visible = false;
                         Form3 f3 = new Form3();
                         //Form1 f1 = new Form1();
                         //f2.Activate();
+                        f3.StudentID= textBox1.Text.ToString();
+                        //studentID = textBox1.Text.ToString();
                         f3.ShowDialog();
                         this.Visible = true;
 

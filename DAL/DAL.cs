@@ -11,6 +11,11 @@ namespace DAL
 {
     public class DAL
     {
+        public string deletespace(string s)
+        {
+            int a=s.IndexOf(" ");
+            return s.Substring(0, a);
+        }
         public List<LogIn> GetLogIn()
         {
             var results = new List<LogIn>();
@@ -24,8 +29,8 @@ namespace DAL
             while (rd.Read())
             {
                 var cls = new LogIn();
-                cls.User= rd.GetString(0);
-                cls.Password = rd.GetString(1);
+                cls.User= this.deletespace( rd.GetString(0));
+                cls.Password = this.deletespace(rd.GetString(1));
                 results.Add(cls);
             }
             cnn.Close();
@@ -287,7 +292,31 @@ namespace DAL
             return Student;
         }
 
+        public List<Transcript> GetCoreStudent(string ID)
+        {
+            var results = new List<Transcript>();
+            OleDbConnection cnn = new OleDbConnection();
+            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            cnn.Open();
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.Connection = cnn;
+            cmd.CommandText = $"select Schedule.NameC,Transcript.Midterm,Transcript.Finalterm,Transcript.Bonus,Transcript.total from Transcript,Schedule where Transcript.ID='{ID}'and Transcript.code=Schedule.Code";
+            var rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                var cls = new Transcript();
+                cls.Name= rd.GetString(0);
+                cls.MidTerm = Convert.ToString(rd.GetDouble(1));
+                cls.FinalTerm = Convert.ToString(rd.GetDouble(2));
+                cls.Bonus = Convert.ToString(rd.GetDouble(3));
+                cls.Total = Convert.ToString(rd.GetDouble(4));
 
+               
+                results.Add(cls);
+            }
+            cnn.Close();
+            return results;
+        }
 
         public List<string> GetClassFromDBToCombobox()
         {
