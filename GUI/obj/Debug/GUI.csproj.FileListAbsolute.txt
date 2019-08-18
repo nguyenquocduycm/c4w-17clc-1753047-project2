@@ -17,3 +17,5 @@ E:\duy\Lập trình Windows\Đồ án 2\Project2\GUI\obj\Debug\GUI.csproj.CopyCo
 E:\duy\Lập trình Windows\Đồ án 2\Project2\GUI\obj\Debug\GUI.Form2.resources
 E:\duy\Lập trình Windows\Đồ án 2\Project2\GUI\obj\Debug\GUI.Form1.resources
 E:\duy\Lập trình Windows\Đồ án 2\Project2\GUI\obj\Debug\GUI.Form3.resources
+E:\duy\Lập trình Windows\Đồ án 2\Project2\GUI\obj\Debug\GUI.Form4.resources
+E:\duy\Lập trình Windows\Đồ án 2\Project2\GUI\bin\Debug\Microsoft.SqlServer.ADONETDest.dll

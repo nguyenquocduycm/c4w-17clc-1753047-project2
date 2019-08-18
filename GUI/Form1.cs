@@ -88,8 +88,17 @@ namespace GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             DAL.DAL d = new DAL.DAL();
+            
+            
             d.InsertGiaoVu();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

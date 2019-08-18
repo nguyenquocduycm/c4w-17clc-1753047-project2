@@ -6,13 +6,27 @@ using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.IO;
 using DTO;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Collections.Generic;
+using System.Configuration;
 
 namespace DAL
 {
     public class DAL
     {
+        private string _Connect;
+        
+        public string Connect
+        {
+            
+            get { return _Connect; }
+            set { _Connect = value; }
+        }
+
         public string deletespace(string s)
         {
+            
             int a=s.IndexOf(" ");
             return s.Substring(0, a);
         }
@@ -20,7 +34,8 @@ namespace DAL
         {
             var results = new List<LogIn>();
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -79,7 +94,9 @@ namespace DAL
         {
             var results = new List<Class>();
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -107,7 +124,9 @@ namespace DAL
         {
             //var results = new List<Class>();
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -135,7 +154,9 @@ namespace DAL
         {
 
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -153,7 +174,9 @@ namespace DAL
         {
 
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -173,7 +196,9 @@ namespace DAL
 
             //var results = new List<Class>();
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -205,7 +230,9 @@ namespace DAL
         public void UpdateScore(string Code,string ID, string mid,string final,string bonus,string total)
         {
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -223,7 +250,9 @@ namespace DAL
         {
             var results = new List<Class>();
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -251,7 +280,9 @@ namespace DAL
         public void InsertGiaoVu()
         {
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            //cnn.ConnectionString = _Connect;
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString=connectionString;
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -268,7 +299,9 @@ namespace DAL
 
 
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -279,7 +312,9 @@ namespace DAL
             cnn.Close();
 
             OleDbConnection cn = new OleDbConnection();
-            cn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionStringg = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cn.ConnectionString = connectionStringg;
+            //cn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cn.Open();
             OleDbCommand cmdd = new OleDbCommand();
             cmdd.Connection = cn;
@@ -296,7 +331,9 @@ namespace DAL
         {
             var results = new List<Transcript>();
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -322,7 +359,9 @@ namespace DAL
         {
             List<string> s = new List<string>();
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -339,7 +378,9 @@ namespace DAL
         {
             List<string> s = new List<string>();
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -356,7 +397,9 @@ namespace DAL
         {
             List<string> s = new List<string>();
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -415,7 +458,9 @@ namespace DAL
         {
             var results = new List<Transcript>();
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -448,7 +493,9 @@ namespace DAL
         {
             int results;
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -464,7 +511,9 @@ namespace DAL
         {
             int results;
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -480,7 +529,9 @@ namespace DAL
         {
             var results = new List<Class>();
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -508,7 +559,9 @@ namespace DAL
         {
             var list = this.GetStudentSchedulefromDB(classes);
             OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+            cnn.ConnectionString = connectionString;
+            //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
             cnn.Open();
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = cnn;
@@ -538,7 +591,9 @@ namespace DAL
             else
             {
                 OleDbConnection cnn = new OleDbConnection();
-                cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+                string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+                cnn.ConnectionString = connectionString;
+                //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
                 cnn.Open();
                 OleDbCommand cmd = new OleDbCommand();
                 cmd.Connection = cnn;
@@ -622,7 +677,9 @@ namespace DAL
             else
             {
                 OleDbConnection cnn = new OleDbConnection();
-                cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
+                string connectionString = ConfigurationManager.ConnectionStrings["MyKey"].ConnectionString;
+                cnn.ConnectionString = connectionString;
+                //cnn.ConnectionString = @"Provider=SQLOLEDB;Server=DESKTOP-124IO3D;Database=University;Trusted_connection=yes;";
                 cnn.Open();
                 OleDbCommand cmd = new OleDbCommand();
                 cmd.Connection = cnn;
