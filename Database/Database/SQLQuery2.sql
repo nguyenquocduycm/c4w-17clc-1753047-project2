@@ -35,6 +35,8 @@ CREATE TABLE Schedule_Class
 	--PRIMARY KEY(ID,Class),
 );
 
+
+
 create table Transcript
 (
 	STT int IDENTITY,
@@ -54,19 +56,3 @@ create table LoginForm
 	pass char(20) not null,
 );
 
-ALTER TABLE Schedule ADD Constraint FK__Schedule__Class__05F8DC4F FOREIGN KEY (Class) REFERENCES Class(Class);
-ALTER TABLE Transript ADD FOREIGN KEY (ID) REFERENCES Class(ID);
-
-insert into Class values ('1742002', 'Nguyen Van A','Male','123456789','17HCB');
-insert into Schedule values ('CTT013', 'Lap trinh','C23','17HCB');
-select distinct Class.Class  from Class
-select distinct Schedule.Class  from Schedule
-
-select Class.STT,Class.ID,Class.NameC,Class.Sex,Class.SSN from Class,Schedule where Class.Class=Schedule.Class;
-
-use master
-drop database University;
-
-DELETE FROM Transcript;
-
-select Count(Transcript.total) from Transcript where Transcript.code='CTT011' and Transcript.total<5
