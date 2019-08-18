@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
@@ -116,10 +117,14 @@
             this.label19 = new System.Windows.Forms.Label();
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -135,7 +140,9 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.Snow;
+            this.tabPage1.BackColor = System.Drawing.Color.MediumOrchid;
+            this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tabPage1.Controls.Add(this.button7);
             this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.button5);
@@ -448,7 +455,8 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.BackColor = System.Drawing.Color.SpringGreen;
+            this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.button13);
             this.tabPage2.Controls.Add(this.listView2);
             this.tabPage2.Controls.Add(this.comboBox6);
@@ -641,7 +649,9 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.SeaShell;
+            this.tabPage3.BackColor = System.Drawing.Color.Khaki;
+            this.tabPage3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage3.BackgroundImage")));
+            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage3.Controls.Add(this.button21);
             this.tabPage3.Controls.Add(this.button20);
             this.tabPage3.Controls.Add(this.textBox14);
@@ -682,7 +692,7 @@
             this.button21.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button21.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button21.Location = new System.Drawing.Point(670, 24);
+            this.button21.Location = new System.Drawing.Point(670, 3);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(90, 37);
             this.button21.TabIndex = 28;
@@ -1078,11 +1088,33 @@
             this.button23.Text = "Change Pass";
             this.button23.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 206);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(117, 89);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Yellow;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(86, 62);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 31;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.label19);
@@ -1097,6 +1129,8 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1191,5 +1225,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
